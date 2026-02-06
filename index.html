@@ -22,25 +22,27 @@ button {
   border:1px solid white;
   color:white;
   padding:8px 16px;
+  cursor:pointer;
 }
 </style>
 </head>
 
 <body>
 <div id="box">
-  <div>Este segundo exacto del futuro está disponible:</div>
+  <div>Este segundo exacto del futuro todavía no pertenece a nadie.</div>
   <div id="second"></div>
-  <button>Todavía no se puede comprar</button>
+  <button>Reclamar este segundo</button>
 </div>
 
 <script>
 function tick(){
   const d=new Date();
   d.setSeconds(d.getSeconds()+10);
-  second.innerText=d.toISOString();
+  document.getElementById("second").innerText=d.toISOString();
 }
 tick();
 setInterval(tick,1000);
 </script>
+
 </body>
 </html>

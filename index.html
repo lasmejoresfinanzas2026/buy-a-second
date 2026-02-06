@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Este segundo puede ser tuyo.</title>
+
+<style>
+body {
+  background:black;
+  color:white;
+  font-family:system-ui;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+#box { text-align:center }
+#second { font-size:22px; margin:15px 0 }
+button {
+  background:none;
+  border:1px solid white;
+  color:white;
+  padding:8px 16px;
+}
+</style>
+</head>
+
+<body>
+<div id="box">
+  <div>Este segundo exacto del futuro está disponible:</div>
+  <div id="second"></div>
+  <button>Todavía no se puede comprar</button>
+</div>
+
+<script>
+function tick(){
+  const d=new Date();
+  d.setSeconds(d.getSeconds()+10);
+  second.innerText=d.toISOString();
+}
+tick();
+setInterval(tick,1000);
+</script>
+</body>
+</html>

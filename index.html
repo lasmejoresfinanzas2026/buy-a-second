@@ -31,18 +31,16 @@ button {
 <div id="box">
   <div>Este segundo exacto del futuro todavía no pertenece a nadie.</div>
   <div id="second"></div>
-  <button onclick="claim()">Reclamar este segundo — 3€</button>
+  <button onclick="location.href='https://buy.stripe.com/Afa00jaQyfEJlI61NNco000'">
+    Reclamar este segundo — 3€
+  </button>
 </div>
 
 <script>
 function tick(){
   const d=new Date();
   d.setSeconds(d.getSeconds()+10);
-  document.getElementById("second").innerText=d.toISOString();
-}
-
-function claim(){
-  alert("Este segundo cuesta 3€. Pronto podrás poseerlo.");
+  document.getElementById("second").innerText = d.toISOString();
 }
 
 tick();
@@ -51,3 +49,4 @@ setInterval(tick,1000);
 
 </body>
 </html>
+

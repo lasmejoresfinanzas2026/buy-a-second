@@ -31,6 +31,7 @@ button {
 <div id="box">
   <div>Este segundo exacto del futuro todavía no pertenece a nadie.</div>
   <div id="second"></div>
+
   <button onclick="location.href='https://buy.stripe.com/aFa00jaQyfEJ1i61NNco000'">
     Reclamar este segundo — 3€
   </button>
@@ -38,14 +39,15 @@ button {
 
 <script>
 function tick(){
-  const d=new Date();
-  d.setSeconds(d.getSeconds()+10);
+  const d = new Date();
+  d.setSeconds(d.getSeconds() + 10);
   document.getElementById("second").innerText = d.toISOString();
 }
 
 tick();
-setInterval(tick,1000);
+setInterval(tick, 1000);
 </script>
 
 </body>
 </html>
+
